@@ -1,1 +1,72 @@
 /* You can add global styles to this file, and also import other style files */
+/* General Body and Container Styles */
+body {
+  background-color: #f0f2f5; /* Light gray background for a clean look */
+}
+
+.custom-card {
+  border: none; /* Remove default card border */
+  border-radius: 1rem; /* Add rounded corners */
+}
+
+.text-primary {
+  color: #007bff !important; /* Standard Bootstrap primary color */
+}
+
+/* Form & Input Styles */
+.form-label {
+  font-weight: 500;
+  color: #343a40;
+}
+
+.custom-input.form-control {
+  border-radius: 0.5rem;
+  border-color: #ced4da;
+  box-shadow: none;
+}
+
+.custom-input.form-control:focus {
+  border-color: #80bdff;
+  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}
+
+/* Button & Icon Styles */
+.btn-primary {
+  background-color: #007bff;
+  border-color: #007bff;
+  border-radius: 0.5rem;
+  font-weight: 600;
+}
+
+.btn-primary:hover {
+  background-color: #0056b3;
+  border-color: #0056b3;
+}
+
+.btn-outline-primary {
+  border-color: #007bff;
+  color: #007bff;
+  border-radius: 0.5rem;
+}
+
+.btn-outline-primary:hover {
+  background-color: #007bff;
+  color: white;
+}
+
+.btn-danger {
+  border-radius: 0.5rem;
+}
+
+/* Polls List Styles */
+.card-title {
+  font-weight: 600;
+}
+
+.text-muted {
+  font-size: 0.8rem;
+}
+
+
+
+

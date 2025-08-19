@@ -1,4 +1,4 @@
-package maverick.com.QuizApp;
+package maverick.com.SurveyApplication;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

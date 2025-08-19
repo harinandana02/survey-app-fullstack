@@ -1,8 +1,7 @@
-package maverick.com.QuizApp.request;
+package maverick.com.SurveyApp.request;
 
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import maverick.com.QuizApp.model.Poll;
 
 @Data
 @NoArgsConstructor

@@ -1,13 +1,11 @@
-package maverick.com.QuizApp.services;
+package maverick.com.SurveyApp.services;
 
 
-import maverick.com.QuizApp.model.OptionVote;
-import maverick.com.QuizApp.model.Poll;
-import maverick.com.QuizApp.repositories.PollRepository;
-import org.springframework.http.ResponseEntity;
+import maverick.com.SurveyApp.model.OptionVote;
+import maverick.com.SurveyApp.model.Poll;
+import maverick.com.SurveyApp.repositories.PollRepository;
 import org.springframework.stereotype.Service;
 
-import javax.swing.text.html.Option;
 import java.util.List;
 import java.util.Optional;
 

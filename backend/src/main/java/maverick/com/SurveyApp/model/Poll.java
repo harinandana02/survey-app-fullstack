@@ -1,12 +1,10 @@
-package maverick.com.QuizApp.model;
+package maverick.com.SurveyApp.model;
 
 
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import javax.swing.text.html.Option;
 import java.util.ArrayList;
 import java.util.List;
 

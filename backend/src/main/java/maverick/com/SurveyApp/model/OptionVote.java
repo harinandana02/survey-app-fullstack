@@ -1,4 +1,4 @@
-package maverick.com.QuizApp.model;
+package maverick.com.SurveyApp.model;
 
 
 import jakarta.persistence.Embeddable;

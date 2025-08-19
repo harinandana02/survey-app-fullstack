@@ -1,41 +1,71 @@
-<div class="container mt-4">
-    <h2 class="text-center">Create Poll</h2>
-    <div class="mb-3">
+<div class="container my-5">
+
+
+  <div class="card p-4 shadow-lg custom-card">
+    <h2 class="text-center mb-4 text-primary">Create a New Survey</h2>
+
+    <div class="form-group mb-3">
+      <label for="poll-question" class="form-label">Survey Question</label>
       <input
+        id="poll-question"
         [(ngModel)]="newPoll.question"
-        placeholder="Poll Question"
-        class="form-control"
+        placeholder="Enter your poll question"
+        class="form-control form-control-lg custom-input"
         required
       />
     </div>
 
     <div class="options-container mb-3">
-      <div *ngFor="let option of newPoll.options; let i = index; trackBy:trackByIndex" class="input-group mb-2">
-         <input
-        [(ngModel)]="option.optionText"
-        placeholder="Option"
-        class="form-control"
-        required
-      />
-      <button *ngIf="newPoll.options.length > 2" (click)="remove_option()" class="btn btn-danger">Remove</button>
+      <label class="form-label">Survey Options</label>
+      <div
+        *ngFor="let option of newPoll.options; let i = index; trackBy: trackByIndex"
+        class="input-group mb-2"
+      >
+        <input
+          [(ngModel)]="option.optionText"
+          placeholder="Enter an option"
+          class="form-control custom-input"
+          required
+        />
+        <button
+          *ngIf="newPoll.options.length > 2"
+          (click)="remove_option()"
+          class="btn btn-danger"
+          aria-label="Remove option"
+        >
+          <i class="fas fa-times"></i>
+        </button>
       </div>
     </div>
 
+    <div class="d-flex justify-content-between align-items-center mb-4">
+      <button class="btn btn-outline-primary" (click)="add_option()">
+        Add another option
+      </button>
+      <button class="btn btn-primary" (click)="createPoll()">
+        Create Survey
+      </button>
+    </div>
+  </div>
 
-  <button class="btn btn-primary mr-3 " (click)="add_option()">Add another option</button><br>
-  <button class="btn btn-primary mt-2" (click)="createPoll()">Create Poll</button>
-
-  <h1 class="mt-4 text-center">Available Polls</h1>
-  <div class="polls-list">
-    <div *ngFor="let poll of polls" class="border rounded p-3 mb-3">
-      <h3>{{ poll.question }}</h3>
-      <div>
-        <div *ngFor="let option of poll.options; let i = index">
-        <button *ngIf="poll.id" (click)="vote(poll.id, i)" class="btn btn-outline-primary mb-2">
-          {{ option.optionText }} ( {{ option.voteCount }} votes)</button>
+  <div class="polls-list mt-5">
+    <h2 class="text-center mb-4 text-primary">Available Surveys</h2>
+    <div *ngFor="let poll of polls" class="card mb-3 custom-card">
+      <div class="card-body">
+        <h3 class="card-title">{{ poll.question }}</h3>
+        <div class="mt-3">
+          <div *ngFor="let option of poll.options; let i = index">
+            <button
+              *ngIf="poll.id"
+              (click)="vote(poll.id, i)"
+              class="btn btn-outline-primary mb-2 w-100 text-start"
+            >
+              <span class="d-block">{{ option.optionText }}</span>
+              <small class="text-muted">{{ option.voteCount }} votes</small>
+            </button>
+          </div>
         </div>
       </div>
     </div>
   </div>
-
 </div>
