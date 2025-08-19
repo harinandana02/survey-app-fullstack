@@ -9,7 +9,7 @@ import { environment } from '../../src/environments/environment';
 })
 export class PollService {
 
-  private baseUrl = environment.backendUrl + '/api/polls'
+  private baseUrl = 'https://survey-app-ckhqekfmbcc2bxec.germanywestcentral-01.azurewebsites.net' + '/api/polls'
   constructor(private http: HttpClient) {
 
   }
