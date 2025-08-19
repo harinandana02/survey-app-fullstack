@@ -36,6 +36,6 @@ Open the `frontend` folder with any IDE (e.g., **Visual Studio Code**).
     `ng serve`
 
 The web interface will be accessible at `http://localhost:4200` to post and edit a survey.
-
+![Survey App Screenshot](./pictures/home_page.png)
 ---
 
