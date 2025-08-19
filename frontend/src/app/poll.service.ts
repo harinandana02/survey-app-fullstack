@@ -2,13 +2,14 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http'
 import { Poll } from './poll.models';
 import { Observable } from 'rxjs';
+import { environment } from '../../src/environments/environment';
 
 @Injectable({
   providedIn: 'root'
 })
 export class PollService {
 
-  private baseUrl = 'http://localhost:8080/api/polls'
+  private baseUrl = environment.backendUrl + '/api/polls'
   constructor(private http: HttpClient) {
 
   }
